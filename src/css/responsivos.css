@@ -1,0 +1,30 @@
+@media (max-width: 1280px) {
+    body {
+        padding: 0 40px; /* Adiciona um espaçamento interno de 40px nas laterais do body */
+    }
+}
+
+@media (max-width: 768px) {
+    .informacoes.ativa {
+        display: flex; /* Usa o layout flexível */
+        flex-direction: column; /* Organiza os itens em coluna */
+        align-items: center; /* Centraliza os itens */
+    }
+    .informacoes .descricao {
+        width: 60%; /* Define a largura para 60% */
+        text-align: center; /* Centraliza o texto */
+    }
+}
+
+@media (max-width: 425px) {
+    body {
+        padding: 40px; /* Adiciona um espaçamento interno de 40px em todas as direções do body */
+    }
+    .informacoes .descricao {
+        width: 100%; /* Define a largura para 100% */
+    }
+    .conteudo {
+        min-height: 70vh; /* Define a altura mínima para 70% da altura da tela */
+        gap: 50px; /* Adiciona um espaçamento de 50px entre os elementos */
+    }
+}

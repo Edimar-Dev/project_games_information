@@ -1,0 +1,118 @@
+/* Define o estilo base para o body */
+body {
+    font-family: "Poppins", sans-serif; /* Define a fonte como Poppins. Se não disponível, usa sans-serif */
+    max-width: 1280px; /* Define a largura máxima do body como 1280px */
+    margin: 0 auto; /* Centraliza o body horizontalmente */
+}
+
+/* Estilo para o carrossel de imagens */
+.carrossel {
+    position: fixed; /* Fixação da imagem na tela */
+    top: 0; /* Alinha ao topo da página */
+    left: 0; /* Alinha à esquerda da página */
+    width: 100%; /* Largura total da tela */
+    z-index: -1; /* Coloca a imagem atrás do conteúdo */
+}
+
+/* Oculta os textos na classe informacoes */
+.informacoes {
+    display: none; /* Esconde os elementos com a classe informacoes */
+}
+
+/* Exibe o texto da classe informacoes quando ativa */
+.informacoes.ativa {
+    display: block; /* Mostra o elemento com a classe informacoes e ativa */
+}
+
+/* Estilo para o conteúdo principal */
+.conteudo {
+    display: flex; /* Usa o layout flexível */
+    flex-direction: column; /* Organiza os itens em coluna */
+    justify-content: space-evenly; /* Espaça os itens de forma igual */
+    min-height: 100vh; /* Define altura mínima de 100% da viewport */
+}
+
+/* Estilo para o título dentro da classe informacoes */
+.informacoes h1 {
+    font-size: 35px; /* Define o tamanho da fonte */
+    color: #ffffff; /* Define a cor do texto como branco */
+    margin-bottom: 80px; /* Define o espaçamento externo abaixo do título */
+    font-family: "GOT"; /* Usa a fonte personalizada GOT */
+    letter-spacing: 8px; /* Espaçamento entre as letras */
+}
+
+/* Definição da fonte personalizada GOT */
+@font-face {
+    font-family: "GOT"; /* Nome da fonte personalizada */
+    src: url(../fonts/GOT.ttf); /* Caminho para o arquivo da fonte */
+}
+
+/* Estilo para a descrição dentro da classe informacoes */
+.informacoes .descricao {
+    width: 49%; /* Define a largura da descrição */
+    font-size: 24px; /* Define o tamanho da fonte */
+    color: #ffffff; /* Define a cor do texto como branco */
+    line-height: 40px; /* Define a altura das linhas do texto */
+    height: 300px; /* Define a altura da caixa de descrição */
+    overflow: auto; /* Adiciona rolagem se o conteúdo exceder a altura */
+    padding-right: 15px; /* Adiciona espaçamento interno à direita */
+}
+
+/* Estilo para os botões do carrossel */
+.botoes-carrosel {
+    display: flex; /* Usa o layout flexível */
+    justify-content: center; /* Centraliza os botões */
+    gap: 20px; /* Espaçamento entre os botões */
+}
+
+/* Estilo para cada botão do carrossel */
+.botoes-carrosel .botao {
+    background-color: #ffffff; /* Define a cor de fundo dos botões */
+    width: 15px; /* Define a largura dos botões */
+    height: 15px; /* Define a altura dos botões */
+    border-radius: 50%; /* Torna os botões circulares */
+    border: 2px solid transparent; /* Define uma borda transparente */
+    cursor: pointer; /* Muda o cursor para uma mãozinha ao passar sobre o botão */
+    border-color: #ffffff; /* Define a cor da borda como branco */
+}
+
+/* Estilo para o botão selecionado do carrossel */
+.botoes-carrosel .botao.selecionado {
+    background-color: #1d8346; /* Define a cor de fundo do botão selecionado */
+}
+
+/* Estilo para as imagens dentro da classe imagem */
+.imagem {
+    width: 100vw; /* Largura total da viewport */
+    height: 100vh; /* Altura total da viewport */
+    object-fit: cover; /* Ajusta a imagem para cobrir a área sem distorcer */
+    display: none; /* Esconde todas as imagens por padrão */
+}
+
+/* Exibe a imagem ativa e aplica uma animação */
+.imagem.ativa {
+    display: block; /* Mostra a imagem com a classe ativa */
+    animation: mudarImagem 0.7s; /* Aplica a animação definida abaixo */
+}
+
+/* Animação para mudar a opacidade das imagens */
+@keyframes mudarImagem {
+    from {
+        opacity: 0.85; /* Opacidade inicial */
+    }
+    to {
+        opacity: 1; /* Opacidade final */
+    }
+}
+
+/* Estilo para o fundo fixo do elemento main */
+main:after {
+    content: ""; /* Cria um elemento vazio */
+    min-height: 100vh; /* Define altura mínima de 100% da viewport */
+    width: 100vw; /* Define a largura total da viewport */
+    position: fixed; /* Fixação na tela */
+    top: 0; /* Alinha ao topo da página */
+    left: 0; /* Alinha à esquerda da página */
+    background: linear-gradient(120deg, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.059) 50%, rgba(0, 0, 0, 1) 90%); /* Cria um gradiente de fundo */
+    z-index: -1; /* Coloca o fundo atrás do conteúdo */
+}
