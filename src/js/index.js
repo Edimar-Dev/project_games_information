@@ -18,10 +18,10 @@ botoesCarrossel.forEach((botao, indice )=> {
     //passo 6 - fazer aparecer a imagem correspondente ao botão clicado  
       mostrarImagemDeFundo(indice);
     
-    //passo 7 - esconder a informação do dragão anteriormente selecionado
+    //passo 7 - esconder a informação do GAME anteriormente selecionado
       escondendoInformacoesAtivas();
 
-    //passo 8 - mostrar a informação do dragão referente ao botão clicado
+    //passo 8 - mostrar a informação do GAME referente ao botão clicado
         mostrarInformacoes(indice);    
 
     });
